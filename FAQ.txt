@@ -1,1 +1,17 @@
-Q1. 
+Q1. Is the item durable?
+Yes
+
+Q2. Is this item easy to use?
+Yes, even you can carry it during traveling also.
+
+Q3. What are the dimensions of this item?
+<Write dimensions of product here>
+
+Q4. Is the product genuine and with warranty?
+Product is genuine with one year warranty.
+
+Q5. Does the mobile supports 5g?
+Yes / No
+
+Q6. Can we use dual 4g sims in mobile?
+Yes.
