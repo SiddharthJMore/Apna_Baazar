@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css?family=Forum:regular");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+*{
+    margin: 0px;
+    text-decoration: none;
+    font-family: 'Poppins', serif;
+    padding: 0px 0px;
+    box-sizing: border-box;
+}
+
+header{
+    /* background-color: aliceblue; */
+    padding-bottom: 10px;
+    min-height: 100vh;
+}
+
+a:link{
+    color: black;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 10px 8px;
+}
+
+.shopping_cart, .account{
+    width: 17%;
+    height: 17%;
+    margin-bottom: 5px;
+}
+
+
+.navlogo{
+    width: 160px;
+    height: fit-content;
+    padding: 0%;
+}
+
+.navlogo img{
+    width: 100%;
+    height: 100%;
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: calc(30vw + 23px + 40px);
+}
+
+.search button{
+    width: 60px;
+    /* background-color: aqua; */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 3px 5px;
+    transition: all 0.2s ease;
+}
+
+.search button:hover{
+    border: 2px solid rgb(255, 119, 0);
+    background-color: rgb(255, 119, 0);
+    color: white;
+}
+
+.search input{
+    outline: none;
+    width: 30vw;
+    padding: 8px 10px;
+    /* background-image: url('../images/search.png');
+    background-size: 25px;
+    background-position: 5px 2px;
+    background-repeat: no-repeat; */
+    border: none;
+    border-radius: 5px;
+    /* margin-bottom: 5px; */
+    background: transparent;
+}
+
+.cart-acc{
+    width: 200px;
+}
+
+.navimg{
+    padding: 0px 20px;
+}
+
+#categories ul{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 1.2%;
+}
+
+#categories ul li{
+    padding: 0px 5px;
+}
+
+#categories a{
+    box-sizing: border-box;
+    padding: 7px 12px;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+}
+
+#categories a:hover{
+    /* text-decoration: underline; */
+    text-underline-offset: 5px;
+    background-color: rgb(255, 153, 64);
+    /* color: white; */
+}
+
+.active{
+    background-color: rgb(255, 153, 64);
+    border-radius: 3px;
+}
+
+
+
+.subcat {
+    display: none;
+    background-repeat: no-repeat;    
+}
+
+#categories ul li:hover .subcat{
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    margin-top: 7px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* box-shadow: 0px 4px 5px grey; */
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    outline: 6px solid rgb(218, 218, 218);
+    outline-offset: -10px;
+}
+
+#categories ul li:hover .subcat ul{
+    display: block;
+    margin: 50px 0px;
+}
+
+#categories ul li:hover .subcat ul li{
+    display: block;
+    margin: 30px 25%;
+    box-sizing: border-box;
+    padding: 5px;
+    /* margin-bottom: 7px; */
+    border-left: 3px solid gold;
+}
+
+#categories ul li:hover .subcat ul li a{
+    color: #000;
+    transition: all 0.5s ease-in;
+}
+
+#categories ul li:hover .subcat ul li a:hover{
+    color: #000;
+    /* text-decoration: underline; */
+    text-underline-offset: 6px;
+}
+
+
+
+
+/* This is for the image that is there on the first page */
+
+#fp-image{
+    position: absolute;
+    top: 120px;
+    left: 0%;
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-image: url("../images/t&c.png");
+    z-index: -1;
+}
+
+main{
+    width: 100%;
+    margin: -150px 0;
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding-bottom: 10%;
+}
+
+h1{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-align: center;
+    padding-bottom: 8%;
+}
+
+#tac{
+    text-align: justify;
+}
+
+
+
+
+/* ***********************************# Fotter ki css #******************************************* */
+footer {
+    padding: 23px 0;
+    background-color: #000;
+    margin-top: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 23px;
+}
+.col-4{
+    margin: 50px 23px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.col-4 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.col-4 ul li{
+    margin: 8px 0;
+}
+.col-4 ul li a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.col-4 ul li a:hover{
+    color: rgb(255, 119, 0);
+}
+.col-4 span{
+    font-size: 1.7em;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: fit-content;
+    font-weight: 900;
+}
+.col-4 img{
+    width: 253px;
+}
+.col-4 p{
+    margin-top: 30px;
+    text-align: left;
+    font-family: 'New Tegomin', serif;
+}
+.col-4:nth-child(4){
+    align-self: center;
+}
+.copy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .social{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .social li a{
+    color: white;
+    margin: 23px 23px 0 0 ;
+    font-size: 23px;
+}
+footer .copy p {
+    text-align: center;
+    padding: 20px 0 0 0;
+    border-top: 1px solid white;
+    width: 90vw;
+}
+.copy .social li .fb:hover {
+    color: #3b5998;
+}
+.copy .social li .insta:hover {
+    color: #E4405F;
+}
+.copy .social li .twitter:hover {
+    color: #1DA1F2;
+}
+.copy .social li .lnk:hover {
+    color: #0077b5;
+}
+
+
+
+
+
+
+/* ******************************# move to top #********************************* */
