@@ -1,0 +1,62 @@
+<h2>Admin Page</h2>
+
+<br>
+
+<div class="pro">
+
+  <h1>Add<br>
+    <span>
+      Product
+    </span>
+  </h1>
+
+
+<div class="addProductDiv">
+
+  <form (ngSubmit)="addProduct()" #appProduct="ngForm">
+
+
+        <label>Product Id</label>
+        <br>
+        <input type="number" [(ngModel)]="product.id" name="id" placeholder="Product ID" required>
+        <br><br>
+        <label>Product Tile</label>
+        <br>
+        <input type="text" [(ngModel)]="product.title" name="title" placeholder="Product Title" required>
+        <br><br>
+        <label>Price</label>
+        <br>
+        <input type="number" [(ngModel)]="product.price" name="price" placeholder="Price" required>
+        <br><br>
+        <label>Description</label>
+        <br>
+        <input type="text" [(ngModel)]="product.description" name="description" placeholder="Product Description" maxlength="500" required>
+        <br><br>
+        <label>Category</label>
+        <br>
+
+        <select [(ngModel)]="product.category" name="category" class="categoryDropdown" required>
+          <option selected disabled>---Select---</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          <option value="jewelery">Jewellery</option>
+          <option value="mobiles">Mobiles</option>
+          <option value="sports">Sports</option>
+        </select>
+
+
+        <br><br>
+        <label>Image URL</label>
+        <br>
+        <input type="text"  [(ngModel)]="product.image" name="image" placeholder="Product Image Link" required>
+        <br><br>
+
+        <label>Ratings</label>
+        <input type="text" [(ngModel)]="product.rating" name="rating" placeholder="Rating" required>
+
+        <br><br>
+        <button type="submit" class="submit" [disabled]="appProduct.invalid">Add Product</button>
+      </form>
+    </div>
+
+  </div>

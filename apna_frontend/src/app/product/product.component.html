@@ -1,0 +1,42 @@
+
+    <main>
+        <div class="product-img">
+            <img src="{{product.image}}" alt="{{product.title}}">
+        </div>
+        <div class="product-name">
+          {{product.title}}
+        </div>
+        <div class="product-price">
+            <!-- calculate the price after discount -->
+            <span>Price: &#x20b9; {{product.price}}</span>
+
+        </div>
+        <div class="product-review">
+            <b>Average Review:</b> {{product.rating}} &#x2605;
+        </div>
+        <div class="product-description">
+            <b>Description:</b>
+            <br>
+            {{product.description}}
+
+        </div>
+
+        <table>
+          <tr>
+            <td><button class="btn" (click)="addtocart(product)" *ngIf="!userService.roleMatch(['Admin'])">Add to cart</button></td>
+            <td><button class="btn" (click)="buyNow(product)" [routerLink]="['/updateProduct']" *ngIf="!userService.roleMatch(['Admin'])">Buy now</button></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td><button class="btn" (click)="deleteProduct(product.id)" *ngIf="userService.roleMatch(['Admin'])">Delete Product</button></td>
+            <td><button class="btn" (click)="setId(product.id)" [routerLink]="['/updateProduct']" *ngIf="userService.roleMatch(['Admin'])">Update Product</button></td>
+          </tr>
+        </table>
+
+
+    </main>
+
+    <!-- <app-thin-banner></app-thin-banner> -->
+
+    <app-footer></app-footer>

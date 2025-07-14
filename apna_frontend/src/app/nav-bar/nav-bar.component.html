@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<header>
+  <nav id="navbar">
+
+      <a routerLink="home" class="logo">
+          <img src="../../assets/navBar/logoLongB.png" alt="logo" >
+      </a>
+
+      <div class="search">
+          <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search for products, brands, and more...">
+          <button>Search</button>
+      </div>
+
+      <div class="cart-acc"  >
+          <a  routerLink="/cart" class="navimg">
+            <div matBadge="{{totalItem}}" matBadgeOverlap="true" matBadgePosition="above before" matBadgeColor="warn" class="demo-section">
+              <img src="../../assets/navBar/cart.png" matBadge="8" matBadgePosition="before" matBadgeColor="accent" alt="shopping_cart" class="shopping_cart">
+            </div>
+          </a>
+          <a routerLink="/user" class="navimg">
+              <img src="../../assets/navBar/user.png" alt="account" class="user" *ngIf="userService.roleMatch(['User'])">
+          </a>
+          <a routerLink="/admin" class="navimg">
+              <img src="../../assets/navBar/admin.png" alt="account" class="admin" *ngIf="userService.roleMatch(['Admin'])">
+          </a>
+
+          <button *ngIf="!isLoggedIn()" type="button" class="success" [routerLink]="['/login']">Login</button>
+          <button *ngIf="isLoggedIn()" type="button" class="danger" (click)="logout()">Logout</button>
+
+      </div>
+
+  </nav>
+
+
+  <!-- categories bar that is below the navigation bar -->
+
+  <!--
+      <li><a (click)="filter('electronics')">Books & Stationery</a>
+
+          <div class="subcat"  style="background-image: url('../../assets/navBar/5.png'); background-size: contain;">
+              <ul>
+                  <li><a [routerLink] = "['category', {pageSec: 'camera'}]" >School & Office</a></li>
+                  <li><a [routerLink] = "['category', {pageSec: 'camera'}]" >Academic</a></li>
+                  <li><a [routerLink] = "['category', {pageSec: 'camera'}]" >Language & Literature</a></li>
+                  <li><a [routerLink] = "['category', {pageSec: 'camera'}]" >Competitive</a></li>
+              </ul>
+          </div>
+      </li>
+  -->

@@ -1,0 +1,213 @@
+<main>
+<header>
+<div id="categories">
+  <ul>
+
+      <li>
+        <a (click)="filter('')" >All products</a>
+      </li>
+
+      <li>
+        <a (click)="filter('electronics')" class="cate">Electronics</a>
+      </li>
+
+      <li>
+        <a (click)="filter('fashion')">Fashion</a>
+      </li>
+
+      <li>
+        <a (click)="filter('jewelery')">Jewellery</a>
+      </li>
+
+      <li>
+        <a (click)="filter('mobiles')">Mobiles</a>
+      </li>
+
+      <li>
+        <a (click)="filter('sports')">Sports</a>
+      </li>
+
+  </ul>
+</div>
+
+</header>
+
+<div class="thinBanner" *ngIf="jaadu">
+  <app-banner-slider></app-banner-slider>
+</div>
+
+
+<div class="containerProduct">
+    <div class="row">
+        <div class="cardProduct" *ngFor="let item of filterCategory | filter:searchKey:'title'">
+
+          <img class="pImg" src="{{item.image}}" (click)="moveToProductPage(item.id)">
+
+          <h5 class="title" style="white-space: wrap;" (click)="moveToProductPage(item.id)">{{item.title}}</h5>
+
+          <div class="product-review">
+            <b>Average Review:</b> {{item.rating}} &#x2605;
+          </div>
+
+          <p class="description" (click)="moveToProductPage(item.id)">
+            <b>Description:</b>
+            <br>
+            {{item.description}}
+          </p>
+
+          <p class="price" (click)="moveToProductPage(item.id)"><strong>Price:</strong> ₹{{item.price}}</p>
+
+          <table>
+            <tr>
+              <td><button class="btn" (click)="addtocart(item)" *ngIf="!userService.roleMatch(['Admin'])">Add to cart</button></td>
+              <td><button class="btn" (click)="buyNow(item)" [routerLink]="['/updateProduct']" *ngIf="!userService.roleMatch(['Admin'])">Buy now</button></td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td><button class="btn" (click)="deleteProduct(item.id)" *ngIf="userService.roleMatch(['Admin'])">Delete Product</button></td>
+              <td><button class="btn" (click)="setId(item.id)" [routerLink]="['/updateProduct']" *ngIf="userService.roleMatch(['Admin'])">Update Product</button></td>
+            </tr>
+          </table>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Profile card -->
+  <h1>Our Team</h1>
+
+  <!-- <div class="profile"> -->
+
+  <div id="profile-outer-div">
+      <div class="container">
+          <div class="rowProfile">
+              <div class="card">
+                  <div class="our-team">
+                      <div class="picture">
+                          <img class="img-fluid" src="../../assets/home/Ashish.png">
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Ashish Jha</h3>
+                          <h4 class="title">Scholar, HCLTech</h4>
+                      </div>
+                      <ul class="social">
+                          <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                          </li>
+                          <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                  aria-hidden="true"></a></li>
+                          <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                          <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="card">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="../../assets/home/Siddharth.jpeg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Siddharth More</h3>
+                        <h4 class="title">Scholar, HCLTech</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                        </li>
+                        <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                aria-hidden="true"></a></li>
+                        <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                        <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+              <div class="card">
+                  <div class="our-team">
+                      <div class="picture">
+                          <img class="img-fluid" src="../../assets/home/KrishnaSree.png">
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Appala Krishnasree</h3>
+                          <h4 class="title">Scholar, HCLTech</h4>
+                      </div>
+                      <ul class="social">
+                          <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                          </li>
+                          <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                  aria-hidden="true"></a></li>
+                          <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                          <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="our-team">
+                      <div class="picture">
+                          <img class="img-fluid" src="../../assets/home/Deepthi.jpeg">
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Yellika Deepti</h3>
+                          <h4 class="title">Scholar, HCLTech</h4>
+                      </div>
+                      <ul class="social">
+                          <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                          </li>
+                          <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                  aria-hidden="true"></a></li>
+                          <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                          <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="our-team">
+                      <div class="picture" id="sk">
+                          <img class="img-fluid" src="../../assets/home/Sunil.png">
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Sunil Kumar Nagar</h3>
+                          <h4 class="title">Scholar, HCLTech</h4>
+                      </div>
+                      <ul class="social">
+                          <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                          </li>
+                          <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                              aria-hidden="true"></a></li>
+                          <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                          <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="card">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="../../assets/home/Ashok.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">S. Ashok Reddy</h3>
+                        <h4 class="title">Scholar, HCLTech</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                        </li>
+                        <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                aria-hidden="true"></a></li>
+                        <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                        <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+          </div>
+      </div>
+  </div>
+
+
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,20 @@
+/* **************************# Carousel ki css #********************************* */
+.carousel {
+    margin-top: 10px;
+    height: 400px;
+    /* z-index: -1; */
+    /* width: 90%; */
+    overflow: hidden;
+}
+.carousel-cell {
+    width: 80%;
+    margin-right: 10px;
+    border-radius: 5px;
+    z-index: 0;
+    height: 100%;
+}
+
+.carousel-cell img{
+    max-width: 100%;
+    border-radius: 20px;
+}

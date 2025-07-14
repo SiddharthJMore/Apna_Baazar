@@ -1,0 +1,64 @@
+<main>
+<div id="leftHalf"></div>
+
+<div id="form-container">
+
+    <div id="form">
+        <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+
+
+          <h1>Login</h1>
+
+          <p class="error">{{errorMsg}}</p>
+          <br>
+
+          <label>Phone Number</label>
+          <br>
+          <input type="tel" placeholder="Enter Phone Number..." style="width: 100%;" maxlength="10" minlength="10" required [(ngModel)]="customer.userPhone" name="userPhone">
+
+          <br><br>
+
+          <!-- </fieldset> -->
+
+          <!-- <fieldset>
+
+          <legend>Extra Information</legend> -->
+
+
+          <label>Password</label>
+          <br>
+          <input type="password"  placeholder="Enter password..." style="width: 100%;" minlength="8" required [(ngModel)]="customer.userPassword" name="userPassword">
+
+          <br><br>
+
+
+          <!-- </fieldset> -->
+          <form [formGroup]="aFormGroup">
+            <ngx-recaptcha2 #captchaElem
+              [siteKey]="siteKey"
+              formControlName="recaptcha" aria-required="true">
+            </ngx-recaptcha2>
+          </form>
+
+          <br>
+
+          <input type="submit" value="Login" [disabled]="loginForm.invalid || aFormGroup.invalid">
+
+        </form>
+
+        <br>
+
+        <!-- {{ customer | json }} -->
+
+        <div class="signupRequest">
+          <a [routerLink]="['/forgotPassword']">Forgot password?</a>
+          <br><br>
+          Don't have a account <a [routerLink]="['/signup']" >Sign Up</a>!
+        </div>
+    </div>
+
+</div>
+</main>
+
+
+<!-- <app-footer></app-footer> -->

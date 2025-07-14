@@ -1,0 +1,128 @@
+
+    <div class="card card-container">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+            <div class="form-group">
+                <div class="alert alert-danger" role="alert" *ngIf="error">Payment failed: {{ error }}</div>
+                <div class="alert alert-success" role="alert" *ngIf="paymentId">Payment Success. Payment ID: {{ paymentId }}</div>
+            </div>
+
+            <fieldset>
+
+            <legend>Personal Information</legend>
+
+            <div class="form-group">
+
+                <input type="text" class="form-control" name="name" [(ngModel)]="form.name" required minlength="3" maxlength="20" #name="ngModel" placeholder="Enter Name"/>
+
+                <div class="alert" *ngIf="f.submitted && name.invalid">
+                    <div *ngIf="name.errors?.['required']">Name is required</div>
+                    <div *ngIf="name.errors?.['minlength']">Name must be at least 3 characters</div>
+                    <div *ngIf="name.errors?.['maxlength']">Name must be at most 20 characters</div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                 <input type="text" class="form-control" name="email" [(ngModel)]="form.email" required #email="ngModel"  placeholder="Email"/>
+                <div class="alert" role="alert" *ngIf="f.submitted && email.invalid">Email is required!</div>
+            </div>
+
+            <div class="form-group">
+                 <input type="tel" class="form-control" name="phone" [(ngModel)]="form.phone" required minLength="10" maxLength="10"
+                    #phone="ngModel" placeholder="Phone Number"/>
+                <div class="alert" role="alert" *ngIf="f.submitted && phone.invalid">
+                    <div *ngIf="phone.errors?.['required']">Phone is required</div>
+                    <div *ngIf="phone.errors?.['minlength'] || phone.errors?.['maxlength']">Phone must be 10 digits</div>
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+        <legend>Shipping Information</legend>
+            <div class="form-group">
+
+              <textarea type="number" class="form-control" rows="1" name="address" [(ngModel)]="form.address" required #address="ngModel" placeholder="Address"></textarea>
+
+                    <div class="alert" role="alert" *ngIf="f.submitted && address.invalid">
+                        <div *ngIf="address.errors?.['required']">Address is required!</div>
+                    </div>
+
+              <table>
+
+                <tr>
+                  <td>
+                    <input type="pincode" class="form-control" name="pincode" [(ngModel)]="form.pincode" required #pincode="ngModel" minlength="6" maxlength="6" placeholder="Pincode"/>
+
+                    <div class="alert" role="alert" *ngIf="f.submitted && pincode.invalid">
+                        <div *ngIf="pincode.errors?.['required']">Pincode is required!</div>
+                        <div *ngIf="pincode.errors?.['maxlength']">Enter 6 digits!</div>
+                        <div *ngIf="pincode.errors?.['minlength']">Enter 6 digits!</div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <input type="text" name="district" [(ngModel)]="form.district" required #district="ngModel" placeholder="District"/>
+
+                    <div class="alert" role="alert" *ngIf="f.submitted && district.invalid">
+                        <div *ngIf="district.errors?.['required']">District is required!</div>
+                    </div>
+                  </td>
+              </tr>
+
+              <tr>
+                  <td class="state">
+                    <input type="text" name="state" [(ngModel)]="form.state" required #state="ngModel" placeholder="State"/>
+
+                    <div class="alert" role="alert" *ngIf="f.submitted && state.invalid">
+                      <div *ngIf="state.errors?.['required']">State is required!</div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <input type="text" name="country" [(ngModel)]="form.country" #country="ngModel" placeholder="India" value="India" class="country" readonly/>
+                  </td>
+              </tr>
+            </table>
+        </div>
+
+          <div class="form-group">
+              <h3 class="amount"> <b>Amount</b> ₹{{cart_total}}</h3>
+              <!-- <input type="number" class="form-control" name="amount" value="{{cart_total}}" #amount readonly/> -->
+          </div>
+
+          <br>
+
+          <!-- </fieldset> -->
+          <div class="captcha">
+            <form [formGroup]="aFormGroup">
+              <ngx-recaptcha2 #captchaElem
+                [siteKey]="siteKey"
+                formControlName="recaptcha" aria-required="true">
+              </ngx-recaptcha2>
+            </form>
+          </div>
+
+
+          <br>
+
+          <div class="form-group">
+            <button mat-raised-button #tooltip="matTooltip"
+              matTooltip="Click to pay"
+              matTooltipPosition="right"
+              color="accent" [disabled]="f.invalid || aFormGroup.invalid">
+                Pay
+            </button>
+          </div>
+
+        </fieldset>
+        </form>
+    </div>
+
+
+
+
+
+  <script src="https://www.google.com/recaptcha/api.js?render=explicit&onload=initRecaptcha" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=explicit&onload=loadCaptcha" async defer></script>

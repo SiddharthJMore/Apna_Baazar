@@ -1,0 +1,129 @@
+* {
+    text-decoration: none;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+.error{
+  color: red;
+}
+
+p::first-letter{
+  text-transform: capitalize;
+}
+
+h1{
+  font-size: 2em;
+}
+
+#form-container {
+    /* align-items: center; */
+
+    position: absolute;
+    width: 50%;
+    right: 0%;
+    margin-top:3.5%;
+}
+
+#form {
+    position: inherit;
+    width: 50%;
+    height: fit-content;
+    left: 25%;
+    font-size: 1.2em;
+    font-family: "Poppins";
+}
+
+#form input[type=tel],input[type=password]{
+    background-color: white;
+    border-radius: 2px;
+    border: 0px solid black;
+    border-bottom: 1px solid black;
+    padding: 6px;
+    margin-top: 1em;
+}
+
+#leftHalf {
+    background: url("../../assets/loginImg.png");
+    margin-top: -10px;
+    background-repeat: no-repeat;
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 89%;
+    background-size: contain;
+}
+
+.signupRequest{
+  font-size: 0.9em;
+  text-align: center;
+}
+
+div a{
+  color: blue;
+}
+
+/* Login form button validation */
+
+#form input[type=submit]:valid{
+  width: 100%;
+  background-color: white;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#form input[type=submit]:valid:hover{
+  background-color: #ff9940;
+  /* border: 0; */
+}
+
+#form input[type=submit]:disabled{
+  cursor: not-allowed;
+  width: 100%;
+  background-color: white;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type=submit]:disabled:hover{
+  cursor: not-allowed;
+}
+
+
+@media screen and (max-width: 600px) {
+
+
+    #form-container {
+        position: absolute;
+        width: 100%;
+        height: fit-content;
+        top: 5%;
+        /* height: 100%; */
+    }
+
+    /* #form-container img{
+        width: 30%;
+        height: 50%;
+    } */
+
+
+    #form {
+        position: absolute;
+        /* width: fit-content;
+        height: fit-content; */
+        left: 25%;
+        font-size: 1.2em;
+    }
+
+    #leftHalf {
+       display:none;
+    }
+}

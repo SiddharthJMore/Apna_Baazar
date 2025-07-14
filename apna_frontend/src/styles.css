@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Josefin+Sans&family=New+Tegomin&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+@import 'node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../../assets/Fonts/Poppins-Regular.ttf");
+}
+
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    margin: -10px;
+    padding: 0px;
+    text-decoration: none;
+}

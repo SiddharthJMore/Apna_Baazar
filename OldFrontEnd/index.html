@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Apna Baazar</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <img src="images/logoLongB.png" alt="logo">
+            <div class="search">
+                <input type="text" placeholder="Search for products, brands, and more...">
+                <button>Search</button>
+            </div>
+            <div class="cart-acc  tooltip">
+                <a href="#" class="navimg">
+                    <img src="images/bag.png" alt="shopping_cart">
+                    <!-- <span  class="tooltiptext">Shopping Cart</span> -->
+                </a>
+                <a href="" class="navimg">
+                    <img src="images/user.png" alt="account">
+                </a>
+            </div>
+        </nav>
+
+        <!-- categories bar that is below the navigation bar -->
+        <div id="categories">
+            <ul>
+                <li><a href="electronics.html" class="cate">Electronics</a>
+                
+                    <div class="subcat" style="background-image: url('images/6.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">Camera</a></li>
+                            <li><a href="#">Computer & laptop</a></li>
+                            <li><a href="#">Smartwatches</a></li>
+                            <li><a href="#">Speakers and Bluetooth</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="babyproducts.html">Baby Products</a>
+                
+                    <div class="subcat"  style="background-image: url('images/1.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">Oils & powder</a></li>
+                            <li><a href="#">Diapers</a></li>
+                            <li><a href="#">Baby's Clothing</a></li>
+                            <li><a href="#">Toys</a></li>
+                        </ul>
+                    </div>
+                
+                </li>
+
+                <li><a href="homeapp.html">Home applicances</a>
+                
+                    <div class="subcat"  style="background-image: url('images/2.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">Furniture</a></li>
+                            <li><a href="#">Cleaning Supplies</a></li>
+                            <li><a href="#">Gardening</a></li>
+                            <li><a href="#">Home Decor</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="fashion.html">Fashion</a>
+                
+                    <div class="subcat"  style="background-image: url('images/3.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Kids</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="accessories.html">Accessories</a>
+                
+                    <div class="subcat"  style="background-image: url('images/6.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">Bangles</a></li>
+                            <li><a href="#">Bracelets</a></li>
+                            <li><a href="#">Chains</a></li>
+                            <li><a href="#">Earrings</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="beauty.html">Beauty</a>
+                    
+                    <div class="subcat"  style="background-image: url('images/4.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">Body Lotion</a></li>
+                            <li><a href="#">Cosmetics</a></li>
+                            <li><a href="#">Face Care</a></li>
+                            <li><a href="#">Hair Care</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="books.html">Books & Stationery</a>
+                
+                    <div class="subcat"  style="background-image: url('images/5.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">School & Office</a></li>
+                            <li><a href="#">Academic</a></li>
+                            <li><a href="#">Language & Literature</a></li>
+                            <li><a href="#">Competitive</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="mobiles.html">Mobiles</a>
+                
+                    <div class="subcat"  style="background-image: url('images/7.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">Viva</a></li>
+                            <li><a href="#">Xiomi</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="sports.html">Sports</a>
+                    
+                    <div class="subcat"  style="background-image: url('images/8.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">Cricket</a></li>
+                            <li><a href="#">Football</a></li>
+                            <li><a href="#">Badminton</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="bestsellers.html" >Best Sellers</a>
+                    <div class="subcat" style="background-image: url('images/10.png'); background-size: contain;">
+                        <ul>
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Under</a></li>
+                            <li><a href="#">Extreme</a></li>
+                            <li><a href="#">Construction</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- carousel slider -->
+        <div class="carousel" data-flickity='{ "wrapAround": true }'>
+            <div class="carousel-cell"><a href="#"><img src="images/banner (1).jpg"></a></div>
+            <div class="carousel-cell"><a href="#"><img src="images/banner (2).jpg"></a></div>
+            <div class="carousel-cell"><a href="#"><img src="images/banner (3).jpg"></a></div>
+            <div class="carousel-cell"><a href="#"><img src="images/banner (4).png"></a></div>
+            <div class="carousel-cell"><a href="#"><img src="images/banner (5).jpg"></a></div>
+            <div class="carousel-cell"><a href="#"><img src="images/banner (6).png"></a></div>
+            <div class="carousel-cell"><a href="#"><img src="images/banner (7).png"></a></div>
+        </div>
+    </header>
+
+
+
+<!-- main body -->
+
+    <main>
+
+
+
+        <span class="slider-heading">Electronics</span>
+        <div class="outer max-width">
+
+            <!-- <div class="leftArrow" onclick="moveLeft()">&#8592</div>
+            <div class="rightArrow" onclick="moveRight()">&#8594</div> -->
+
+            
+            
+
+
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/computer (1).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 68,490</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>34% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Lenovo Ideapad 3 AMD Ryzen 5 5500U Thin & Light Laptop...</span>
+                </div>
+
+            </a>
+
+
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/computer (2).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 41,899</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>38% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Radiant Electro 18.5 inches All in One Gamming Computer Set...</span>
+                </div>
+                
+            </a>
+
+
+            <!-- Experiment card 3 -->
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/computer (3).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 1,19,900</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>30% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>2022 Apple MacBook Air Laptop with M2 chip...</span>
+                </div>
+                
+            </a>
+
+
+            <!-- Experiment card 4 -->
+
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/computer (4).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 71,990</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>31% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>ASUS TUF Gaming A15, 15.6-inch...</span>
+                </div>
+                
+            </a>
+            
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/computer (5).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 26,633</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>14% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>HP Slim Tower Desktop PC Intel Celeron G5905...</span>
+                </div>
+                
+            </a>
+
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/speaker (1).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 2,999</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>37% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>JBL Go 2, Wireless Portable Bluetooth...</span>
+                </div>
+                
+            </a>
+            
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/speaker (2).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 1,999</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>50% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>JMi Outdoor Bluetooth 5 Speaker...</span>
+                </div>
+                
+            </a>
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/speaker (3).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 29,999</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>23% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Marshall Acton II 60 Watt Wireless Bluetooth...</span>
+                </div>
+            </a>
+            
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/speaker (4).jpg" alt="" class="image-resize"></div>
+
+                <div class="price3">
+                    <span>&#x20b9; 2,990</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>67% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>boAt Stone 170 with 5W Speaker Bluetooth V4.2...</span>
+                </div>
+                
+            </a>
+            <div class="_2kgArB _2CP_Bu"><svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="_1xtBwk"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_23HYg_"></path></svg></div>
+        </div>
+
+
+        
+        <span class="slider-heading">Baby's Section</span>
+        <div class="outer max-width">
+
+
+
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/baby_lotion (1).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 500</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>35% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Himalaya Baby Lotion 700ml</span>
+                </div>
+
+            </a>
+
+
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/baby_lotion (2).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 350</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>1% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Baby Dove Rich Moisture Nourishing Baby Lotion 400 ml...</span>
+                </div>
+                
+            </a>
+
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/baby_lotion (3).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 393</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>33% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>The Moms Co. Natural Baby Lotion...</span>
+                </div>
+                
+            </a>
+
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/baby_lotion (4).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 399</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>3% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Mamaearth Super Strawberry Body Lotion...</span>
+                </div>
+                
+            </a>
+            
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/baby_lotion (5).jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 299</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>29% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Mee Mee Nourishing Baby Lotion...</span>
+                </div>
+                
+            </a>
+
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/toy 1.jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9;899</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>70% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Toyshine Pack of 7 Rattle Set...</span>
+                </div>
+                
+            </a>
+            
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/toy 2.jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 399</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>41% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Rifa Artism Wooden Xylophone for Kids...</span>
+                </div>
+                
+            </a>
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/toy 3.jpg" alt="" class="image-resize"></div>
+                
+                <div class="price3">
+                    <span>&#x20b9; 150</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>5% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Toyztrend Ratna's Junior Smiley Stacking Multicolour 5...</span>
+                </div>
+            </a>
+            
+            <a class="inner" href="#">
+                <div class="img-div"><img src="images/Products/toy 4.jpg" alt="" class="image-resize"></div>
+
+                <div class="price3">
+                    <span>&#x20b9; 120</span>
+                </div>
+
+                <!-- <div class="brand">
+                    <span>Apple</span>
+                </div> -->
+
+                <div class="discount3">
+                    <span>2% Off</span>
+                </div>
+
+                <div class="product-name3">
+                    <span>Ratnas Musical Ding Dong Rattle Multicolour...</span>
+                </div>
+                
+            </a>
+        <div class="_2kgArB _2CP_Bu"><svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="_1xtBwk"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_23HYg_"></path></svg></div>
+        </div>
+
+
+
+        <hr/>
+        
+        <!-- *******************Categories in the form of cards******************* -->
+
+            <span class="category-section-head">More categories!</span>
+
+            <div class="page-categories-container">
+
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard1.jpg" alt="">
+                        <span>Beauty</span>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard2.jpg" alt="">
+                        <span>Fashion</span>
+                    </div>
+                </a>
+                
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard3.jpg" alt="">
+                        <span>Footwear</span>
+                    </div>
+                </a>
+            
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard4.jpg" alt="">
+                        <span>Sports</span>
+                    </div>
+                </a>
+            
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard5.jpg" alt="">
+                        <span>Baby's Section</span>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard6.jpg" alt="">
+                        <span>Mobiles</span>
+                    </div>
+                </a>
+                
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard7.jpg" alt="">
+                        <span>Electronics</span>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard8.jpg" alt="">
+                        <span>Books</span>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard9.jpg" alt="">
+                        <span>Jewelry</span>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="page-categories">
+                        <img src="images/categoryCard10.jpg" alt="">
+                        <span>Home Decor</span>
+                    </div>
+                </a>
+
+            </div>
+
+
+
+        <!-- Profile card -->
+        <span class="slider-heading m-top">Our Team</span>
+
+        <!-- <div class="profile"> -->
+
+                    
+            <div id="profile-outer-div">
+                <div class="container">
+                    <div class="row">
+                        <div class="card">
+                            <div class="our-team">
+                                <div class="picture">
+                                    <img class="img-fluid" src="images/Ashish.jpg">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name">Ashish Jha</h3>
+                                    <h4 class="title">Scholar, HCLTech</h4>
+                                </div>
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                                    </li>
+                                    <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                            aria-hidden="true"></a></li>
+                                    <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                                    <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="our-team">
+                                <div class="picture">
+                                    <img class="img-fluid" src="images/Ashok.png">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name">S. Ashok Reddy</h3>
+                                    <h4 class="title">Scholar, HCLTech</h4>
+                                </div>
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                                    </li>
+                                    <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                            aria-hidden="true"></a></li>
+                                    <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                                    <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="our-team">
+                                <div class="picture">
+                                    <img class="img-fluid" src="images/KrishnaSree.png">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name">Appala Krishnasree</h3>
+                                    <h4 class="title">Scholar, HCLTech</h4>
+                                </div>
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                                    </li>
+                                    <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                            aria-hidden="true"></a></li>
+                                    <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                                    <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="our-team">
+                                <div class="picture">
+                                    <img class="img-fluid" src="sunil1.jpg">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name">Yellika Deepti</h3>
+                                    <h4 class="title">Scholar, HCLTech</h4>
+                                </div>
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                                    </li>
+                                    <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                            aria-hidden="true"></a></li>
+                                    <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                                    <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="our-team">
+                                <div class="picture" id="sk">
+                                    <img class="img-fluid" src="images/Sunil.png">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name">Sunil Kumar Nagar</h3>
+                                    <h4 class="title">Scholar, HCLTech</h4>
+                                </div>
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                                    </li>
+                                    <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                        aria-hidden="true"></a></li>
+                                    <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                                    <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="our-team">
+                                <div class="picture">
+                                    <img class="img-fluid" src="sunil1.jpg">
+                                </div>
+                                <div class="team-content">
+                                    <h3 class="name">Siddharth More</h3>
+                                    <h4 class="title">Scholar, HCLTech</h4>
+                                </div>
+                                <ul class="social">
+                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                                    </li>
+                                    <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                                            aria-hidden="true"></a></li>
+                                    <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                                    <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <!-- </div> -->
+        
+    </main>
+
+
+
+    <!-- Footer Section-->
+
+    <footer>
+        <div class="content">
+            <div class="col-4">
+                <span>Contact Us</span>
+                <ul>
+                    <li><a href="tel: 8094397433">+91 8094397433</a></li>
+                    <li> <a href="mailto: apna.baazar.2022@gmail.com">apna.baazar.2022@gmail.com</a></li>
+                    <li> <a href=""></a> <b>Hindustan</b></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <span>Our Services</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Features</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <span>Quick Links</span>
+                <ul>
+                    <li><a href="#">Knowledge Base</a></li>
+                    <li><a href="#">Hire An Expert</a></li>
+                    <li><a href="t&c.html">Terms & Conditions</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <img src="images/logonew.png" alt="" width="253px">
+                <p>Apna Baazar, providing you the best quality products.</p>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Copyright &copy; 2022 Apna Baazar&trade; | All rights reserved</p>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/" class="fa fa-facebook fb" aria-hidden="true"></a>
+                </li>
+                <li><a href="https://twitter.com/?lang=en-in" class="fa fa-twitter twitter"
+                        aria-hidden="true"></a></li>
+                <li><a href="www.google.co.in" class="fa fa-instagram insta" aria-hidden="true"></a></li>
+                <li><a href="https://in.linkedin.com" class="fa fa-linkedin lnk" aria-hidden="true"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+</body>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</html>

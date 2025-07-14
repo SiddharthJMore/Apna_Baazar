@@ -1,0 +1,37 @@
+
+
+<div class="paymentDiv">
+  <h1>Order Successfully Placed!😊😊</h1>
+  <div class="paymentCard">
+
+    <div class="price">
+      ₹{{cartTotal}}
+    </div>
+
+
+    <span class="title">Shiped to:</span>
+
+    <p>
+      <b>Name:</b> {{customerName | titlecase}}
+      <br>
+
+      <b>Address:</b> {{customerAddress |titlecase}}
+      <br>
+       <span class="address">{{district | titlecase}}, {{state | titlecase}}, {{pincode}}</span>
+      <br>
+      <b>Phone: </b>{{customerPhone}}
+      <br>
+      <b>Email:</b> {{customerEmail}}
+    </p>
+    <br>
+
+    <span class="title">Order details:</span>
+    <p>
+      <b>
+      Order ID:</b> {{orderId}}
+      <br>
+      <b>Payment ID:</b> {{paymentId}}
+    </p>
+
+  </div>
+</div>

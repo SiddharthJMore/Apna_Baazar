@@ -1,0 +1,84 @@
+
+<div id="leftHalf"></div>
+
+<div id="form-container">
+
+
+
+    <div id="form">
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+
+        <h1>Signup</h1>
+        <br>
+
+        <Span class="error">{{errorMsg}}</Span>
+
+        <br><br>
+
+        <label>Phone Number<span style="color: red;">*</span></label>
+        <br>
+        <input telephone type="number" [(ngModel)]="customer.userPhone" name="userPhone"
+            placeholder="Enter Phone Number..." style="width: 100%;"
+            oninput="javascript: if (this.value.length >= this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="10" minlength="10"
+            required>
+
+        <br><br>
+
+
+        <label>Name<span style="color: red;">*</span></label>
+        <br>
+        <input type="text" [(ngModel)]="customer.userFirstName" name="userFirstName" placeholder="Enter First Name..." autofocus required >
+        &nbsp;
+        <input type="text" [(ngModel)]="customer.userLastName" name="userLastName" placeholder="Enter Last Name..." required>
+
+        <br><br>
+
+
+        <label>Gender<span style="color: red;">*</span></label>
+        <br>
+        <select style="width: 100%;" required [(ngModel)]="customer.gender" name="gender">
+            <option value="select" selected disabled hidden>Select</option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+            <option value="o">Other</option>
+        </select>
+
+        <br><br>
+
+        <label>Email<span style="color: red;">*</span></label>
+        <br>
+        <input email pattern="[a-z|A-Z0-9._%+-]+@[a-z|A-Z0-9.-]+\.[a-z|A-Z]{2,4}$" validateEmail=true type="email" [(ngModel)]="customer.email" name="email" placeholder="Enter your Email..." style="width: 100%;" required>
+
+        <br><br>
+
+        <Label>Password<span style="color: red;">*</span></Label>
+        <br>
+        <input type="password" #password="ngModel" [(ngModel)]="customer.userPassword" name="userPassword" placeholder="Enter Password..." style="width: 100%;" minlength="8" required>
+
+
+        <div [hidden]="password.valid || password.pristine">
+          <div [hidden]="!password.hasError('minlength')">
+            Enter atleast 8 character
+          </div>
+        </div>
+
+
+        <br><br>
+
+
+        <span class="short">With this you agree to our <a routerLink="/tandc">Terms & Conditions</a></span>
+
+        <br><br>
+
+        <input type="submit" [disabled]="form.invalid" value="Signup">
+
+        <br><br>
+
+      </form>
+    </div>
+
+</div>
+
+
+

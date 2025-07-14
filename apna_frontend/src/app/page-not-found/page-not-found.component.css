@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url("../../assets/Fonts/Poppins-Regular.ttf");
+}
+
+*{
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  grid-template-areas:
+    'h1 img'
+    'h2 img'
+    'btn img';
+  row-gap: 5px;
+}
+
+.pgnotfound{
+  margin: 2rem 5rem;
+}
+
+h1{
+  grid-area: h1;
+  font-family: "Poppins", 'Trebuchet MS', sans-serif;
+  font-size: 5em;
+  align-self: center;
+}
+
+h2{
+  grid-area: h2;
+  font-family: "Poppins", 'Trebuchet MS', sans-serif;
+  font-size: 4em;
+  align-self: center;
+}
+
+button{
+  display: flex;
+  align-self: center;
+  grid-area: btn;
+  font-size: 1.1rem;
+  background-color: #ff9944;
+  border: 0px;
+  width: 10rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  border-radius: 5px;
+}
+
+button:hover{
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+.img{
+  grid-area: img;
+}
+
+.img img{
+  width: 400px;
+  align-self: center;
+}

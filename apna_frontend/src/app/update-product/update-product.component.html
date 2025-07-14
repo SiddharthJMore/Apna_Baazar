@@ -1,0 +1,27 @@
+<div class="father">
+  <h1>Update <br>
+    <span>
+      Product
+    </span>
+  </h1>
+
+    <div class="updateDiv">
+      <form #update="ngForm" (ngSubmit)="updateProduct()">
+        <label>Product Name</label>
+        <input type="text" [(ngModel)]="product.title" value="{{productOld.title}}" name="title" placeholder="Product name">
+        <br>
+        <label>Price</label>
+        <input type="number" [(ngModel)]="product.price" value="{{productOld.price}}" name="price" placeholder="Product price">
+        <br>
+        <label>Product Description</label>
+        <input type="text" [(ngModel)]="product.description" value="{{productOld.description}}" name="description" placeholder="Product description">
+        <br>
+        <label>Image Link</label>
+        <input type="text" [(ngModel)]="product.image" value="{{productOld.image}}" name="image" placeholder="Image Link">
+        <br>
+        <br>
+
+        <button type="submit" [disabled]="update.invalid"  mat-stroked-button (click)="openSnackBar()" >Update</button>
+      </form>
+    </div>
+</div>

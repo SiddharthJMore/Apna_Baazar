@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Forum:regular");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Poppins:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+
+}
+
+
+/* **********************************# Product #************************************* */
+
+
+
+main{
+    grid-area: main;
+    margin: 2rem 10rem 10rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    'img name'
+    'img price'
+    'img review'
+    'img details'
+    'img button'
+    'faq faq'
+    'product-slider product-slider'
+    'slider slider';
+    gap: 1em;
+    font-family: 'Poppins';
+}
+
+
+.product-img{
+    grid-area: img;
+    width: 100%;
+}
+
+.product-img img{
+    max-width: 100%;
+}
+
+.product-name{
+    grid-area: name;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding: 0px 0px 10px 0px;
+    line-height: 1.2em;
+}
+
+.product-price{
+    grid-area: price;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 900;
+}
+
+.product-review{
+    grid-area: review;
+    font-size: 1.1rem;
+}
+
+.product-description{
+    grid-area: details;
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+button{
+    padding: 0.5rem 1rem;
+    width: 14rem;
+    background-color: white;
+    border: 1px solid #ff9940;
+    transition: all 0.5s ease;
+    font-weight: 900;
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #ff9940;
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+.faq{
+    grid-area: faq;
+    padding: 2rem 0rem;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    /* margin-top: 8rem;
+    padding: 0em 5rem; */
+}
+
+
+/* ****************************# Product #****************************** */
+
+
+/* ********************************# Product Slider #****************************** */
+
+/* .slider-heading{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 3% 0px 20px 0px;
+    border-bottom: 5px solid #ff9940;
+    width: fit-content;
+    font-weight: 900;
+    font-size: 2em;
+    background: -webkit-linear-gradient(45deg, #ff0000, #008bd6);
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+} */
+
+.max-width {
+    max-width: 100%;
+}
+
+.outer {
+    padding: 90px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-around; */
+    /* border: 2px solid black; */
+    /* margin: auto; */
+    overflow-y: auto;
+    overflow-x: scroll;
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+    grid-area: product-slider;
+}
+
+/* ********************************# Product #****************************** */
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;
+    justify-content: flex-start; */
+    margin: 0 2% 0% 3.2%;
+    /* height: 7vh; */
+    /* object-fit: contain; */
+    flex-basis: 2;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s ease;
+}
+
+.inner span {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/*
+main:has(.inner:hover) .inner:not(:hover){
+    opacity: .7;
+    -webkit-filter: blur(0.5px);
+} */
+
+
+
+
+/* ********************************# Product Image Division #****************************** */
+
+.img-div {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    /* box-shadow: 0px 0px 4px grey; */
+    box-shadow: 0px 0px 10px rgb(144, 144, 144);
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 200px;
+    width: 150px;
+    transition: all 0.4s ease;
+}
+
+.img-div:hover{
+    transform: scale(1.15);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+}
+
+.image-resize {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* object-position: center center; */
+}
+
+.inner:hover .img-div{
+    transform: scale(1.15);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+}
+
+
+/* ****************************card 3*********************************** */
+.price {
+    background-color: rgb(255, 170, 0);
+    /* background-color: rgb(255, 153, 64); */
+    width: 85px;
+    height: 25px;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-8px, -65px);
+    opacity: 1;
+    scale: 1;
+    font-size: 0.95em;
+    font-weight: 900;
+    transition: all .5s;
+    z-index: 10;
+    transition: all 0.4s ease;
+}
+
+.inner:hover .price{
+    scale: 1.15;
+    transform: translate(-6px, -50px);
+    background-color: rgb(255, 136, 0);
+}
+
+.outer .product-name {
+    box-sizing: border-box;
+    padding: 12px;
+    font-size:0.95em;
+    font-weight: 600;
+    position: relative;
+    margin: -50% 0px;
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+    border: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(204, 204, 204);
+    transition: all .4s ease;
+}
+
+.inner:hover .product-name{
+    transform: scale(1.08);
+    /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+}
+
+.inner:hover .discount{
+    scale: 1.1;
+    transform: translate(-35px, -255px);
+    background-color: rgb(255, 136, 0);
+}
+
+.discount{
+    border-radius: 50%;
+    background-color: rgb(255, 170, 0);
+    width: 60px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-35px, -270px);
+    opacity: 1;
+    scale: 1;
+    transition: all .5s;
+    z-index: 10;
+}
+
+.discount span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 0.8em;
+}
+

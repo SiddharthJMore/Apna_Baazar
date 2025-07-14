@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css?family=Forum:regular");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Poppins:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../../assets/Fonts/Poppins-Regular.ttf");
+}
+
+/* *********************************# Main #*************************************** */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eaeaea;
+    margin: 50px 0;
+
+}
+
+/* ********************************# Product Slider #****************************** */
+
+.slider-heading{
+    font-family: 'Poppins', sans-serif;
+
+    text-align: center;
+    margin: 3% 0px 20px 0px;
+    border-bottom: 5px solid #ff9940;
+    width: fit-content;
+    font-weight: 900;
+    font-size: 2em;
+    background: -webkit-linear-gradient(45deg, #ff0000, #008bd6);
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+
+.max-width {
+    width: 85vw;
+}
+
+.outer {
+    padding: 90px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-around; */
+    /* border: 2px solid black; */
+    /* margin: auto; */
+    overflow-y: auto;
+    overflow-x: scroll;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+/* ********************************# Product #****************************** */
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;
+    justify-content: flex-start; */
+    margin: 0 2% 0% 3.2%;
+    /* height: 7vh; */
+    /* object-fit: contain; */
+    flex-basis: 2;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s ease;
+}
+
+.inner span {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/*
+main:has(.inner:hover) .inner:not(:hover){
+    opacity: .7;
+    -webkit-filter: blur(0.5px);
+} */
+
+
+
+
+/* ********************************# Product Image Division #****************************** */
+
+.img-div {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    /* box-shadow: 0px 0px 4px grey; */
+    box-shadow: 0px 0px 10px rgb(144, 144, 144);
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 200px;
+    width: 150px;
+    transition: all 0.4s ease;
+}
+
+.img-div:hover{
+    transform: scale(1.15);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+}
+
+.image-resize {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* object-position: center center; */
+}
+
+.inner:hover .img-div{
+    transform: scale(1.15);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+}
+
+
+/* ****************************card 3*********************************** */
+.price {
+    background-color: rgb(255, 170, 0);
+    /* background-color: rgb(255, 153, 64); */
+    width: 85px;
+    height: 25px;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-8px, -65px);
+    opacity: 1;
+    scale: 1;
+    font-size: 0.95em;
+    font-weight: 900;
+    transition: all .5s;
+    z-index: 10;
+    transition: all 0.4s ease;
+}
+
+.inner:hover .price{
+    scale: 1.15;
+    transform: translate(-6px, -50px);
+    background-color: rgb(255, 136, 0);
+}
+
+.brand {
+    background-color: rgba(138, 138, 138, 0.628);
+    /* background-color: rgb(255, 153, 64); */
+    width: 100%;
+    height: 25px;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0px, -230px);
+    opacity: 1;
+    scale: 1;
+    font-size: 0.85em;
+    font-weight: 900;
+    transition: all .5s;
+    z-index: 10;
+    transition: all 0.4s ease;
+}
+
+.inner:hover .brand{
+    scale: 1.15;
+    transform: translate(-0px, -210px);
+}
+
+.product-name {
+    box-sizing: border-box;
+    padding: 12px;
+    font-size:0.95em;
+    font-weight: 600;
+    position: relative;
+    margin: -50% 0px;
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(204, 204, 204);
+    transition: all .4s ease;
+}
+
+.inner:hover .product-name{
+    transform: scale(1.08);
+    /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+}
+
+.inner:hover .discount{
+    scale: 1.1;
+    transform: translate(-35px, -255px);
+    background-color: rgb(255, 136, 0);
+}
+
+.discount{
+    border-radius: 50%;
+    background-color: rgb(255, 170, 0);
+    width: 60px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-35px, -270px);
+    opacity: 1;
+    scale: 1;
+    transition: all .5s;
+    z-index: 10;
+}
+
+.discount span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 0.8em;
+}
+
+
+
+/* ***********************!!Complex!! Categories wise margin ************************ */
+
+.electronics {
+    margin: -16% 0%;
+}
+
+.electronics-price{
+    width: 70px;
+    height: 70px;
+}
+
+
+
+/* **********************************# Slider arrows #****************************** */
+
+
+
+.leftArrow{
+    font-size: 2em;
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.rightArrow{
+    font-size: 2em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* **********************************# Categories Card inside the page #************************************* */
+
+
+.category-section-head{
+    font-family: 'forum';
+    font-size: 3em;
+    /* text-decoration: underline;
+    text-underline-offset: 15px; */
+    margin: 5%;
+}
+
+.page-categories-container{
+    display: flex;
+    width: 90%;
+    margin: 1%;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #000;
+}
+
+.page-categories-container img{
+    width: 200px;
+    height: fit-content;
+    padding: 5px;
+    background-color: white;
+    border-radius: 0px;
+}
+
+
+.page-categories {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    scale: 1;
+    transition: all 0.4s ease;
+}
+
+.page-categories span{
+    font-family: 'Poppins';
+    font-size: 1em;
+    font-weight: 800;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.page-categories:hover {
+    scale: 1.08;
+    box-shadow: 0px 0px 10px #8b8b8b;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* *********************************# Profile Card #*********************************************** */
+
+
+.m-top{
+  margin-top: 100px;
+}
+
+/* .profile {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+} */
+#profile-outer-div{
+  overflow: auto;
+  padding: 33px;
+  /* margin-top: 10px; */
+}
+#profile-outer-div::-webkit-scrollbar{
+  visibility: visible;
+}
+#profile-outer-div::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: rgb(193, 190, 190);
+  /* width: 10px; */
+}
+
+#profile-outer-div::-webkit-scrollbar-thumb:hover{
+  /* cursor: pointer; */
+  background-color: rgb(177, 177, 177);
+}
+
+.container{
+  font-family: tahoma;
+  width: 85vw;
+  /* overflow: hidden; */
+}
+.row{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  /* width: 100vw; */
+}
+.card{
+  margin: 0 23px;
+}
+.our-team {
+  padding: 30px 10px 40px;
+  margin-bottom: 30px;
+  /* background-color: #ffffee; */
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+}
+
+.our-team h3 {
+  font-size: 1.1em;
+}
+
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.our-team .picture::before {
+  content: "";
+  width: 90%;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgb(255, 153, 64);
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(255, 153, 64);
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+}
+
+#sk::after{
+  top: 4px;
+}
+
+.our-team .picture::after:nth-child(5) {
+  top: 30px;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .title {
+  display: block;
+  font-size: 14px;
+  color: #66696c;
+  text-transform: capitalize;
+}
+
+.our-team .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 153, 64);
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.our-team .social li {
+  display: inline-block;
+  width: 18%;
+}
+
+.our-team .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.our-team .social li .fb:hover {
+  color: #3b5998;
+  background-color: #f7f5ec;
+}
+.our-team .social li .insta:hover {
+  color: #E4405F;
+  background-color: #f7f5ec;
+}
+.our-team .social li .twitter:hover {
+  color: #1DA1F2;
+  background-color: #f7f5ec;
+}
+.our-team .social li .lnk:hover {
+  color: #0077b5;
+  background-color: #f7f5ec;
+}
+
+
+/* **************************# Carousel2 ki css #********************************* */
+
+.carousel2 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 300px;
+    width: 90%;
+}
+
+.carousel-cell2 {
+    width: 100%;
+    height: 100%;
+    /* margin-right: 10px;
+    border-radius: 5px;
+    z-index: 0; */
+}
+
+.carousel-cell2 img{
+    max-width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}

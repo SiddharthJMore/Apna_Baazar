@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Forum:regular");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', serif;
+    box-sizing: border-box;
+    color: black;
+}
+
+::ng-deep * {
+
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+::ng-deep * a:visited, a:link{
+  color: black ;
+  box-sizing:border-box;
+}
+
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 1px;
+}
